@@ -4,13 +4,11 @@ block content
   h1= title
   p Welcome to #{title}
   p welcome to my second server
-  button(type="button", class="btn btn-primary" onclick="doReduce()") press me
+  button(type="button", class="btn btn-primary" onclick="goFaster()") press me
   br
 
   div#faster Increase the speed
-
-  a(href="/vehicles") Vehicles Search Results
-    script.
+  script.
       var mph = 20;
       var change = 1;
 
