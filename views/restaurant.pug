@@ -1,11 +1,15 @@
 extends layout
 
-
 block content
   h1= title
-  
-  - var results =[{restaurantName:"Bawarchi", restaurantPlace:"Kansas city", restaurantBill:500},{restaurantName:"korryleaves", restaurantPlace:"Saint joe", restaurantBill:200},restaurantName:"A&G", restaurantPlace:"Maryville", restaurantBill:100]
+  - var results =[{name:"Swift", mileage:"50000", price:200000},{name:"Creta", mileage:"20000", price:1500000},{name:"Thar", mileage:"30000", price:3000000}]
   div(class="container-fluid")
   div(class="row")
    each v,index  in results 
-    div(class="col-sm-2") #{v.restaurantName}, #{v.restaurantPlace}, #{v.restaurantBill}
+    div(class="col-sm-2" onclick =`buy(${index})`) #{v.name}, #{v.mileage}, #{v.price}
+    script.
+        function buy(a)
+        {
+            alert(`You purchased Item ${a+1}`)
+        }
+ 
