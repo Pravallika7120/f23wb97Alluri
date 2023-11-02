@@ -6,5 +6,10 @@ block content
   div(class="container-fluid")
   div(class="row")
    each v,index  in results 
-    div(class="col-sm-2") #{v.name}, #{v.place}, #{v.bill}
+    div(class="col-sm-2" onclick =`buy(${index})`) #{v.name}, #{v.place}, #{v.bill}
+        script.
+        function buy(a)
+        {
+            alert(`You purchased Item ${a+1}`)
+        }
     
