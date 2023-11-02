@@ -3,8 +3,9 @@ extends layout
 
 block content
   h1= title
+  
   - var results =[{restaurantName:"Bawarchi", restaurantPlace:"Kansas city", restaurantBill:500},{restaurantName:"korryleaves", restaurantPlace:"Saint joe", restaurantBill:200},restaurantName:"A&G", restaurantPlace:"Maryville", restaurantBill:100]
   div(class="container-fluid")
   div(class="row")
    each v,index  in results 
-    div(class="col-sm-2" onclick =`buy(${index})`) #{v.restaurantName}, #{v.restaurantPlace}, #{v.restaurantBill}
+    div(class="col-sm-2") #{v.restaurantName}, #{v.restaurantPlace}, #{v.restaurantBill}
